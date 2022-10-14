@@ -24,7 +24,7 @@ class Route
         // добавляем префиксы
         $model_name = $controller_name.'_model';
         $controller_name = 'controller_'.$controller_name;
-        $action_name = $action_name.'_action';
+        $action_name = 'action_'.$action_name;
 
         // подцепляем файл с классом модели (файла модели может и не быть)
 
@@ -48,7 +48,8 @@ class Route
             правильно было бы кинуть здесь исключение,
             но для упрощения сразу сделаем редирект на страницу 404
             */
-            Route::ErrorPage404();
+            print "Ошибка маршрутизации_1";
+            //Route::ErrorPage404();
         }
 
         // создаем контроллер
@@ -63,7 +64,8 @@ class Route
         else
         {
             // здесь также разумнее было бы кинуть исключение
-            Route::ErrorPage404();
+            print "Ошибка маршрутизации_2";
+            //Route::ErrorPage404();
         }
 
     }
